@@ -25,12 +25,13 @@
         let timer = document.getElementById("timer");
         let remainingTime = document.getElementById("remainingTime");
         let nowUnix;
+        let theDate = 1646863200;
 
         function updateCurrentTime() {
         nowUnix = Math.floor(Date.now() / 1000);
         timer.innerHTML = `${nowUnix} - unix time`; 
         
-        let delta = 1646863200 - Math.floor(Date.now() / 1000);
+        let delta = theDate - Math.floor(Date.now() / 1000);
         let deltaUnix = new Date(delta * 1000);
 
         let months = deltaUnix.getMonth();
