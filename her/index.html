@@ -30,7 +30,7 @@
         nowUnix = Math.floor(Date.now() / 1000);
         timer.innerHTML = `${nowUnix} - unix time`; 
         
-        let delta = 1678359600 - Math.floor(Date.now() / 1000);
+        let delta = 1646863200 - Math.floor(Date.now() / 1000);
         let deltaUnix = new Date(delta * 1000);
 
         let months = deltaUnix.getMonth();
@@ -41,7 +41,7 @@
         
         remainingTime.innerHTML = `${months} months ` + `${days} days ` + `${hours} hours ` + `${minutes} minutes ` + `${seconds} seconds ` + `remain`;
     }
-        setInterval(updateCurrentTime, 1000);
+    setInterval(updateCurrentTime, 1000);
 
     updateCurrentTime();
 
