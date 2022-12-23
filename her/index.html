@@ -19,10 +19,14 @@
     .her {
         color: red;
     }
+    p {
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 </style>
 <body>
     <h1 id="remainingTime" class="her"></h1>
-
+    <p><3</p>
     <script>
         let remainingTime = document.getElementById("remainingTime");
         let nowUnix;
@@ -38,7 +42,7 @@
         let minutes = deltaUnix.getMinutes();
         let seconds = deltaUnix.getSeconds();
         
-        remainingTime.innerHTML = `${months} months ` + `${days} days ` + `${hours} hours ` + `${minutes} minutes ` + `${seconds} seconds ` + `remain`;
+        remainingTime.innerHTML = `${months} months ` + `${days} days ` + `${hours} hours ` + `${minutes} minutes ` + `${seconds} seconds `;
     }
     setInterval(update, 1000);
 
