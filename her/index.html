@@ -28,9 +28,11 @@
     <h1 id="remainingTime" class="her"></h1>
     <p><3</p>
     <script>
+        window.ip
+
         let remainingTime = document.getElementById("remainingTime");
         let nowUnix;
-        let theDate = 1678309200;
+        let theDate = 1646690400;
 
         function update() {       
         let delta = theDate - Math.floor(Date.now() / 1000);
