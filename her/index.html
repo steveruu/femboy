@@ -16,21 +16,19 @@
     h1 {
         font-size: 30px;
     }
+    .her {
+        color: red;
+    }
 </style>
 <body>
-    <h1 id="timer"></h1>   
-    <h1 id="remainingTime"></h1>
+    <h1 id="remainingTime" class="her"></h1>
 
     <script>
-        let timer = document.getElementById("timer");
         let remainingTime = document.getElementById("remainingTime");
         let nowUnix;
         let theDate = 1646863200;
 
-        function updateCurrentTime() {
-        nowUnix = Math.floor(Date.now() / 1000);
-        timer.innerHTML = `${nowUnix} - unix time`; 
-        
+        function update() {       
         let delta = theDate - Math.floor(Date.now() / 1000);
         let deltaUnix = new Date(delta * 1000);
 
@@ -42,9 +40,9 @@
         
         remainingTime.innerHTML = `${months} months ` + `${days} days ` + `${hours} hours ` + `${minutes} minutes ` + `${seconds} seconds ` + `remain`;
     }
-    setInterval(updateCurrentTime, 1000);
+    setInterval(update, 1000);
 
-    updateCurrentTime();
+    update();
 
     </script>
 
